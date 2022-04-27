@@ -1,0 +1,55 @@
+$colorpincipal:black;
+$colorsecundario: white;
+$colorterciario: gray;
+$anchototal: 100px;
+
+$redes: (
+    twitter: #55acee,
+    Instagram:violet,
+    Whatsaap: green
+);
+
+@each $red,$color in $redes {
+.btn--#{$red} {
+    background-color: color;
+    }
+};
+
+$stilos:(
+    color: #3673D9,
+    centro: center,
+    tFuente:35px,
+    1rem:1rem
+    );
+    div{
+        background-color: map-get($stilos, color);
+        text-align:map-get($stylos, centro);
+        padding: map-get($stylos, 1rem);
+        font-size: map-get($stilos tFuente);
+    }
+    .boton{
+        width:200px;
+        height:50px;
+        background-color: white;
+        text-align:center;
+        color:black;
+        border-radius:20px;
+        border:1px solid black; 
+    }
+    .boton--aceptar{
+        @extend .boton;
+        background-color:green;
+        color:yellow;
+    }
+    .boton--cancelar{
+        @extend .boton;
+        background-color:red;
+        color:yellow;
+    }
+    @mixin sizes($width, $height) {
+        height: $height;
+        width: $width;
+    }
+    .box {
+        @include sizes(500px, 50px);
+    }
